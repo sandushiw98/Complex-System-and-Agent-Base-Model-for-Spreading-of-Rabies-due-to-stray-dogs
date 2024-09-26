@@ -1,0 +1,5 @@
+breed [stray-dogs stray-dog]
+breed [pet-dogs pet-dog]
+breed [pedestrians pedestrian]
+breed [dog-owners dog-owner]
+breed [officers officer]
