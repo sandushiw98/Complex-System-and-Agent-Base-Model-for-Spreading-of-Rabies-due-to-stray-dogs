@@ -3,3 +3,11 @@ breed [pet-dogs pet-dog]
 breed [pedestrians pedestrian]
 breed [dog-owners dog-owner]
 breed [officers officer]
+
+turtles-own [
+  infected?
+  sterilized?
+  vaccinated?
+  health
+  age
+]
