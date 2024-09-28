@@ -24,3 +24,10 @@ globals [
   total-sterilized
   total-adopted
 ]
+
+to setup
+  clear-all
+  setup-environment
+  setup-agents
+  reset-ticks
+end
