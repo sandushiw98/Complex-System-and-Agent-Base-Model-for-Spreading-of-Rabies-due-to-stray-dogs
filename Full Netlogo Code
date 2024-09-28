@@ -16,3 +16,11 @@ patches-own [
   is-food-source?
   is-shelter?
 ]
+
+globals [
+  rabies-cases-stray
+  rabies-cases-pet
+  rabies-cases-human
+  total-sterilized
+  total-adopted
+]
