@@ -11,3 +11,8 @@ turtles-own [
   health
   age
 ]
+
+patches-own [
+  is-food-source?
+  is-shelter?
+]
