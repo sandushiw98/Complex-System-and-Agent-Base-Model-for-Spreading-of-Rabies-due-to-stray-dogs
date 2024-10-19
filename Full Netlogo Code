@@ -95,3 +95,11 @@ create-dog-owners number-of-dog-owners [
     set size 2
     set infected? false
   ]
+
+create-officers number-of-officers [
+    setxy random-xcor random-ycor
+    set shape "person"
+    set color red
+    set size 2
+  ]
+end
