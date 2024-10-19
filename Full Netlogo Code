@@ -31,3 +31,28 @@ to setup
   setup-agents
   reset-ticks
 end
+
+to setup-environment
+  ask patches [
+    set pcolor green + 3
+    set is-food-source? false
+    set is-shelter? false
+  ]
+  
+  ; Set up food sources (yellow)
+  ask n-of (count patches * 0.05) patches [
+    set pcolor yellow
+    set is-food-source? true
+  ]
+  
+  ; Set up shelters (brown)
+  ask n-of (count patches * 0.05) patches [
+    set pcolor brown
+    set is-shelter? true
+  ]
+  
+  ; Set up roads (black)
+  ask patches with [pxcor mod 10 = 0 or pycor mod 10 = 0] [
+    set pcolor black
+  ]
+end
