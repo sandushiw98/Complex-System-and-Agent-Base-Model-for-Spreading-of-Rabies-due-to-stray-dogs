@@ -79,3 +79,11 @@ create-pet-dogs initial-pet-dogs [
     set health 100
     set age random 5
   ]
+
+create-pedestrians number-of-pedestrians [
+    setxy random-xcor random-ycor
+    set shape "person"
+    set color blue
+    set size 2
+    set infected? false
+  ]
