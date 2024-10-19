@@ -68,3 +68,14 @@ to setup-agents
     set health 100
     set age random 5
   ]
+
+create-pet-dogs initial-pet-dogs [
+    setxy random-xcor random-ycor
+    set shape "dog"
+    set color white
+    set size 1.5
+    set infected? false
+    set vaccinated? random-float 1 < initial-vaccination-rate
+    set health 100
+    set age random 5
+  ]
