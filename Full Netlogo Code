@@ -56,3 +56,15 @@ to setup-environment
     set pcolor black
   ]
 end
+
+to setup-agents
+  create-stray-dogs initial-stray-dogs [
+    setxy random-xcor random-ycor
+    set shape "dog"
+    set color brown
+    set size 1.5
+    set infected? random-float 1 < initial-infection-rate
+    set sterilized? false
+    set health 100
+    set age random 5
+  ]
