@@ -87,3 +87,11 @@ create-pedestrians number-of-pedestrians [
     set size 2
     set infected? false
   ]
+
+create-dog-owners number-of-dog-owners [
+    setxy random-xcor random-ycor
+    set shape "person"
+    set color green
+    set size 2
+    set infected? false
+  ]
