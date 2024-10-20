@@ -148,3 +148,19 @@ to interact
     ]
   ]
 end
+
+to interact-with-nearby-agent
+  let nearby-agent one-of other turtles in-radius 1.5
+  if nearby-agent != nobody [
+    if [breed] of nearby-agent = pet-dogs [
+      if infected? and not [vaccinated?] of nearby-agent [
+        ask nearby-agent [ set infected? true ]
+      ]
+    ]
+    if [breed] of nearby-agent = pedestrians or [breed] of nearby-agent = dog-owners [
+      if infected? and random-float 1 < human-infection-probability [
+        ask nearby-agent [ set infected? true ]
+      ]
+    ]
+  ]
+end
