@@ -103,3 +103,14 @@ create-officers number-of-officers [
     set size 2
   ]
 end
+
+to go
+  move-agents
+  interact
+  spread-rabies
+  sterilize-dogs
+  reproduce-stray-dogs
+  update-health
+  update-globals
+  tick
+end
