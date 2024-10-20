@@ -114,3 +114,27 @@ to go
   update-globals
   tick
 end
+
+to move-agents
+  ask turtles [
+    if breed = stray-dogs [
+      ifelse any? patches in-radius 3 with [is-food-source?]
+        [ face min-one-of patches with [is-food-source?] [distance myself] ]
+        [ rt random 50 - random 50 ]
+    ]
+    if breed = pet-dogs or breed = dog-owners [
+      rt random 50 - random 50
+    ]
+    if breed = pedestrians [
+      ifelse random-float 1 < 0.1
+        [ face one-of patches with [pcolor = black] ]
+        [ rt random 50 - random 50 ]
+    ]
+    if breed = officers [
+      if random-float 1 < 0.1 [
+        face min-one-of stray-dogs [distance myself]
+      ]
+    ]
+    fd 1
+  ]
+end
