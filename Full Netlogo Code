@@ -138,3 +138,13 @@ to move-agents
     fd 1
   ]
 end
+
+to interact
+  ask stray-dogs [
+    if any? other turtles in-radius 1.5 [
+      if random-float 1 < interaction-probability [
+        interact-with-nearby-agent
+      ]
+    ]
+  ]
+end
