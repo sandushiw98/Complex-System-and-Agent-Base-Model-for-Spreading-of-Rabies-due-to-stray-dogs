@@ -164,3 +164,13 @@ to interact-with-nearby-agent
     ]
   ]
 end
+
+to spread-rabies
+  ask stray-dogs with [infected?] [
+    ask other stray-dogs in-radius 1.5 [
+      if random-float 1 < rabies-transmission-rate [
+        set infected? true
+      ]
+    ]
+  ]
+end
