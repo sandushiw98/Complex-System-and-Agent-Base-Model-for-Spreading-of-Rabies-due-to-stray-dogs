@@ -209,3 +209,11 @@ to update-health
     ]
   ]
 end
+
+to update-globals
+  set rabies-cases-stray count stray-dogs with [infected?]
+  set rabies-cases-pet count pet-dogs with [infected?]
+  set rabies-cases-human count turtles with [breed = pedestrians or breed = dog-owners] with [infected?]
+  set total-sterilized count stray-dogs with [sterilized?]
+  set total-adopted count pet-dogs - initial-pet-dogs
+end
