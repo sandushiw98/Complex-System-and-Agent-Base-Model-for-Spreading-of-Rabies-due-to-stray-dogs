@@ -186,3 +186,16 @@ to sterilize-dogs
     ]
   ]
 end
+
+to reproduce-stray-dogs
+  ask stray-dogs [
+    if not sterilized? and random-float 1 < reproduction-rate [
+      hatch 1 [
+        set infected? false
+        set sterilized? false
+        set health 100
+        set age 0
+      ]
+    ]
+  ]
+end
