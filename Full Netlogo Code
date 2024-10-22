@@ -199,3 +199,13 @@ to reproduce-stray-dogs
     ]
   ]
 end
+
+to update-health
+  ask turtles [
+    if breed = stray-dogs or breed = pet-dogs [
+      set health health - 1
+      if infected? [ set health health - 2 ]
+      if health <= 0 [ die ]
+    ]
+  ]
+end
