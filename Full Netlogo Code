@@ -174,3 +174,15 @@ to spread-rabies
     ]
   ]
 end
+
+to sterilize-dogs
+  ask officers [
+    let target one-of stray-dogs in-radius 2 with [not sterilized?]
+    if target != nobody [
+      ask target [
+        set sterilized? true
+        set color gray
+      ]
+    ]
+  ]
+end
